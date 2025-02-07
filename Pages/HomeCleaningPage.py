@@ -38,7 +38,6 @@ class HomeCleaningPage(BasePage):
         for professionals in range(0, self.max_professionals):
             number_of_professionals_selector = (By.ID, f"number_of_cleaners-{professionals}-text")
             self.click_element(number_of_professionals_selector)
-            time.sleep(1)
             if 0 <= professionals and self.check_booking_details_number_of_professionals(self.booking_details_number_of_professionals) != str(professionals + 1):
                 return False
         return True

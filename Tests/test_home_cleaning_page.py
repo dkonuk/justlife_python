@@ -19,7 +19,7 @@ class TestHomeCleaningPage:
         home_cleaning_page.click_home_cleaning()
         assert home_cleaning_page.select_duration() is True, "Selected duration does not match to the one in details"
         home_cleaning_page.select_number_of_professionals()
-        #assert home_cleaning_page.cleaning_materials_no_selection() is True, "Selected cleaning material does not match to the one in details"
+        assert home_cleaning_page.cleaning_materials_no_selection() is True, "Selected cleaning material does not match to the one in details"
         assert home_cleaning_page.cleaning_materials_yes_selection() is True, "Selected cleaning material does not match to the one in details"
 
 

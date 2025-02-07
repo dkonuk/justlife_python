@@ -4,7 +4,7 @@ import time
 
 
 
-class TestHomePage(BasePage):
+class TestHomePage():
 
     def test_homepage_menu(self, fixtureSetup):
         driver = fixtureSetup

@@ -2,6 +2,7 @@ from Pages.BasePage import BasePage
 from Pages.HomePage import HomePage
 from selenium.webdriver.common.by import By
 import time
+from Pages.HomeCleaningAddOnsPage import AddOnsPage
 
 class HomeCleaningPage(BasePage):
 
@@ -15,6 +16,7 @@ class HomeCleaningPage(BasePage):
     cleaning_material_no_selector = (By.ID, "material-0-text")
     cleaning_material_yes_selector = (By.ID, "material-1-text")
     booking_details_cleaning_materials = (By.ID, "details-material")
+    next_button = (By.ID, "funnel-next-button")
 
 
     def __init__(self, driver):
@@ -57,5 +59,12 @@ class HomeCleaningPage(BasePage):
             return True
         else:
             return False
+
+    def click_next_button(self):
+        self.click_element(self.next_button)
+        return AddOnsPage(self.driver)
+
+
+
 
 

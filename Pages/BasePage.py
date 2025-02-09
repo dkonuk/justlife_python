@@ -45,3 +45,6 @@ class BasePage:
     def check_booking_details_number_of_professionals(self, locator):
         number_of_professionals = self.find_element(locator).text
         return number_of_professionals
+
+    def javascript_click(self, locator):
+        self.driver.execute_script("arguments[0].click();", self.find_element(locator))

@@ -32,6 +32,14 @@ class TestHomeCleaningPage:
         assert addons_page.add_ons_details_check("Ironing and Folding") is True, "Ironing and Folding is not in the details"
         addons_page.click_party_cleaning()
         assert addons_page.add_ons_details_check("Party Cleaning") is True, "Party Cleaning is not in the details"
+        addons_page.click_next_button()
+        addons_page.click_wardrobe_cleaning()
+        assert addons_page.add_ons_details_check("Wardrobe Cleaning") is True, "Wardrobe Cleaning is not in the details"
+        addons_page.click_kitchen_assistance()
+        assert addons_page.add_ons_details_check("Kitchen Assistance") is True, "Kitchen Assistance is not in the details"
+        addons_page.click_cupboard_cleaning()
+        assert addons_page.add_ons_details_check("Cupboard Cleaning") is True, "Cupboard Cleaning is not in the details"
+        time.sleep(1)
 
 
 

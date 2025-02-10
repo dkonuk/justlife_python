@@ -5,7 +5,6 @@ import time
 from Pages.HomeCleaningAddOnsPage import AddOnsPage
 
 class HomeCleaningPage(BasePage):
-
     home_cleaning = (By.ID, "service-home_cleaning")
     max_duration = 8
     max_professionals = 4
@@ -17,7 +16,6 @@ class HomeCleaningPage(BasePage):
     cleaning_material_yes_selector = (By.ID, "material-1-text")
     booking_details_cleaning_materials = (By.ID, "details-material")
     next_button = (By.ID, "funnel-next-button")
-
 
     def __init__(self, driver):
         super().__init__(driver)

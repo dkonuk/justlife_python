@@ -1,4 +1,5 @@
 from Pages.BasePage import BasePage
+from Pages.Frequency_PopupPage import Frequency_PopupPage
 from selenium.webdriver.common.by import By
 import time
 
@@ -18,46 +19,34 @@ class AddOnsPage(BasePage):
     next_button = (By.ID, "funnel-next-button")
 
 
-
-
-
-
-
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
 
     def click_balcony_cleaning(self):
         self.click_element(self.balcony_cleaning)
-        time.sleep(1)
 
     def click_ironing_and_folding(self):
         self.click_element(self.ironing_and_folding)
-        time.sleep(1)
 
     def click_party_cleaning(self):
         self.click_element(self.party_cleaning)
-        time.sleep(1)
 
     def click_wardrobe_cleaning(self):
         self.javascript_click(self.wardrobe_cleaning)
         #self.click_element(self.wardrobe_cleaning)
-        time.sleep(1)
 
-    def click_next_button(self):
+    def click_next_add_ons_button(self):
         self.click_element(self.add_ons_right_arrow)
 
     def click_kitchen_assistance(self):
         self.click_element(self.kitchen_assistance)
-        time.sleep(1)
 
     def click_cupboard_cleaning(self):
         self.click_element(self.cupboard_cleaning)
-        time.sleep(1)
 
     def click_fridge_cleaning(self):
         self.click_element(self.fridge_cleaning)
-        time.sleep(1)
 
     def click_add_on_right_arrow_2(self):
         self.javascript_click(self.add_ons_right_arrow)
@@ -70,3 +59,7 @@ class AddOnsPage(BasePage):
         else:
             print("Actual text in service details: " + service_details_text)
             return False
+
+    def click_next_button(self):
+        self.click_element(self.next_button)
+        return Frequency_PopupPage(self.driver)
